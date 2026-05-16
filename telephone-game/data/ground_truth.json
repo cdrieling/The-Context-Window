@@ -1,0 +1,46 @@
+{
+  "fact_count": 33,
+  "categories": {
+    "dates": [
+      {"id": "D01", "fact": "Launch: September 5, 1977"},
+      {"id": "D02", "fact": "Launch gap to Voyager 2: 16 days (V2 earlier)"},
+      {"id": "D03", "fact": "Jupiter closest approach: March 5, 1979"},
+      {"id": "D04", "fact": "Saturn closest approach: November 12, 1980"},
+      {"id": "D05", "fact": "Pale Blue Dot: February 14, 1990"},
+      {"id": "D06", "fact": "Heliopause crossing: August 25, 2012"},
+      {"id": "D07", "fact": "Light-day milestone: November 2026"}
+    ],
+    "numbers": [
+      {"id": "N01", "fact": "Primary mission length: 5 years"},
+      {"id": "N02", "fact": "Planetary alignment cycle: ~176 years"},
+      {"id": "N03", "fact": "Time gap Jupiter to Saturn: 20 months"},
+      {"id": "N04", "fact": "Pale Blue Dot distance: ~6 billion km"},
+      {"id": "N05", "fact": "Golden Record diameter: 12 inches"},
+      {"id": "N06", "fact": "Languages on Golden Record: 55"},
+      {"id": "N07", "fact": "RTG count: 3"},
+      {"id": "N08", "fact": "Plutonium-238 half-life: 87.7 years"},
+      {"id": "N09", "fact": "Current distance: ~25 billion km"},
+      {"id": "N10", "fact": "Current speed: ~61,000 km/h"}
+    ],
+    "entities": [
+      {"id": "E01", "fact": "Cape Canaveral (launch site)"},
+      {"id": "E02", "fact": "Voyager 2 (sister probe)"},
+      {"id": "E03", "fact": "NASA (operator)"},
+      {"id": "E04", "fact": "Titan IIIE-Centaur (launch vehicle)"},
+      {"id": "E05", "fact": "Io (moon with volcanoes)"},
+      {"id": "E06", "fact": "Titan (moon flown by at Saturn)"},
+      {"id": "E07", "fact": "Carl Sagan (Pale Blue Dot, Golden Record team)"}
+    ],
+    "claims": [
+      {"id": "C01", "fact": "Jupiter has a faint ring system (Voyager 1 imaged it)"},
+      {"id": "C02", "fact": "Io has active volcanoes"},
+      {"id": "C03", "fact": "First observation of active volcanism beyond Earth"},
+      {"id": "C04", "fact": "Titan trajectory pushed V1 above the ecliptic plane"},
+      {"id": "C05", "fact": "Pale Blue Dot was V1's final photograph"},
+      {"id": "C06", "fact": "Cameras powered down afterward to save energy"},
+      {"id": "C07", "fact": "First human-made object to enter interstellar space"},
+      {"id": "C08", "fact": "Golden Record curated by a team led by Sagan"},
+      {"id": "C09", "fact": "Golden Record contains greetings, music, and images"}
+    ]
+  }
+}

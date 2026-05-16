@@ -1,0 +1,42 @@
+import os, time
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
+client = OpenAI(base_url=os.environ["OMLX_API_URL"], api_key=os.environ["OMLX_API_KEY"], timeout=300.0)
+
+prompt = """You will paraphrase the following text. Follow these rules exactly:
+
+1. Output ONLY the paraphrased text. No preamble, no explanation, no notes.
+2. Target length: 370 words. Acceptable range: 333 to 407 words.
+3. Preserve every fact, name, date, and number exactly. Do not round numbers.
+4. Use different wording and sentence structures than the original.
+5. Do NOT add any information that is not in the source text.
+
+TEXT:
+Voyager 1 launched from Cape Canaveral on September 5, 1977, sixteen days after its sister probe Voyager 2 — a counterintuitive ordering explained by the different trajectories NASA had chosen for the two spacecraft. Riding a Titan IIIE-Centaur rocket, the probe began a primary mission of five years: a planetary flyby of Jupiter and Saturn during a rare alignment of the outer planets that occurs roughly once every 176 years.
+
+It reached Jupiter on March 5, 1979, sending back the first detailed images of the planet's faint ring system and discovering active volcanoes on its moon Io — the first observation of active volcanism beyond Earth. Twenty months later, on November 12, 1980, Voyager 1 made its closest approach to Saturn, photographing the ring structure in unprecedented detail and capturing close-ups of the moon Titan. The Titan trajectory pushed Voyager 1 above the plane of the solar system, ending its planetary tour but setting it on a path toward interstellar space.
+
+On February 14, 1990, at the urging of astronomer Carl Sagan, Voyager 1 turned its camera back toward home and photographed Earth from roughly 6 billion kilometers away. The image — a single pixel against the sun's scattered light — became known as the Pale Blue Dot. It was the spacecraft's final photograph; the cameras were powered down afterwards to conserve energy.
+
+Voyager 1 crossed the heliopause on August 25, 2012, becoming the first human-made object to enter interstellar space. It carries the Golden Record, a 12-inch gold-plated copper phonograph disc curated by a team led by Sagan, containing greetings in 55 languages, music, and images intended for any intelligence that might one day find it. Power comes from three radioisotope thermoelectric generators fueled by plutonium-238, whose 87.7-year half-life has slowly drained the spacecraft's energy budget.
+
+As of early 2026, Voyager 1 is roughly 25 billion kilometers from Earth, traveling at about 61,000 kilometers per hour. In November 2026, it will become the first probe to cross one light-day of distance.
+
+PARAPHRASE:"""
+
+t0 = time.monotonic()
+resp = client.chat.completions.create(
+    model="Qwen3.5-4B-MLX-4bit",
+    messages=[{"role": "user", "content": prompt}],
+    temperature=0.7,
+    seed=42,
+    max_tokens=3000,
+)
+elapsed = time.monotonic() - t0
+text = resp.choices[0].message.content
+print(f"=== RAW RESPONSE ({elapsed:.1f}s) ===")
+print(repr(text))
+print(f"\n=== USAGE ===")
+print(resp.usage)

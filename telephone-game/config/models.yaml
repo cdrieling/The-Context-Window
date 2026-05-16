@@ -1,0 +1,8 @@
+models:
+  qwen:
+    api_model_id: "Qwen3.5-4B-MLX-4bit"
+    display_name: "Qwen 3.5 4B 4-bit"
+  gemma:
+    api_model_id: "gemma-4-E4B-it-MLX-4bit"
+    display_name: "Gemma 4 E4B IT 4-bit"
+# Architecture is multi-model-ready — add more entries here in V2

@@ -1,0 +1,9 @@
+experiments:
+  qwen_solo:
+    description: "Qwen 3.5 4B ×10 (variance baseline)"
+    chain: [qwen, qwen, qwen, qwen, qwen, qwen, qwen, qwen, qwen, qwen]
+    seeds: [42, 123, 456]   # runs 3× for variance characterization
+  gemma_solo:
+    description: "Gemma 4 E4B ×10 (variance baseline)"
+    chain: [gemma, gemma, gemma, gemma, gemma, gemma, gemma, gemma, gemma, gemma]
+    seeds: [42, 123, 456]
