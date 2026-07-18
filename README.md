@@ -14,4 +14,6 @@ Content will be organized by topic or post as the blog grows.
 
 ## License
 
+Copyright 2026 Christian Drieling
+
 Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for details.
