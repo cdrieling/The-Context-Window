@@ -14,4 +14,4 @@ Content will be organized by topic or post as the blog grows.
 
 ## License
 
-Unless noted otherwise, data and code in this repository are provided for educational purposes. See individual files or folders for specific licensing information.
+Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for details.
